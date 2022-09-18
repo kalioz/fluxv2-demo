@@ -9,7 +9,7 @@ spec:
   interval: 1m0s
   ref:
     branch: main
-  secretRef:
-    name: secondary-flux-repo
+  # secretRef:
+  #   name: secondary-flux-repo
   timeout: 60s
   url: ssh://git@github.com/kalioz/fluxv2-demo-tenant-repo.git
