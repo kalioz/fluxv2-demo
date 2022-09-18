@@ -3,7 +3,7 @@ apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
   name: secondary-flux-repo
-  namespace: flux-system
+  namespace: apps
 spec:
   gitImplementation: go-git
   interval: 1m0s
