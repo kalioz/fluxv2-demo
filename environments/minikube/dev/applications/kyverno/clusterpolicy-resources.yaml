@@ -1,0 +1,32 @@
+# cat environments/minikube/dev/applications/kyverno/clusterpolicy-resources.yaml
+---
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: all-containers-need-requests-and-limits
+spec:
+  validationFailureAction: audit # set to `enforce` to block the ressource creation if it doesn't match the rule
+  rules:
+  - name: check-container-resources
+    match:
+      any:
+      - resources:
+          kinds:
+          - Pod
+    validate:
+      message: "All containers must have CPU and memory resource requests and limits defined."
+      pattern:
+        spec:
+          containers:
+          # Select all containers in the pod. The `name` field here is not specifically required but serves
+          # as a visual aid for instructional purposes.
+          - name: "*"
+            resources:
+              limits:
+                # '?' requires 1 alphanumeric character and '*' means that
+                # there can be 0 or more characters. Using them together
+                # e.g. '?*' requires at least one character.
+                memory: "?*"
+              requests:
+                memory: "?*"
+                cpu: "?*"
