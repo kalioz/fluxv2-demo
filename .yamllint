@@ -1,8 +1,11 @@
-ignore: .venv
-
+---
 extends: default
 
+# ignore flux-generated files
+ignore: |
+  **/gotk-components.yaml
+  .venv
+
 rules:
-  line-length:
-    max: 120
-    level: warning
+  indentation: disable
+  line-length: disable
