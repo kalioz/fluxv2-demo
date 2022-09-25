@@ -3,20 +3,20 @@ repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.3.0
     hooks:
-    -   id: trailing-whitespace
-    -   id: end-of-file-fixer
+    - id: trailing-whitespace
+    - id: end-of-file-fixer
     # -   id: check-yaml
-    -   id: debug-statements
-    -   id: double-quote-string-fixer
-    -   id: name-tests-test
-    -   id: requirements-txt-fixer
-  # - repo: https://github.com/adrienverge/yamllint.git
-  #   rev: v1.28.0
-  #   hooks:
-  #     - id: yamllint
-  #       name: yamllint
-  #       description: runs yamllint
-  #       entry: yamllint
-  #       language: python
-  #       types: [file, yaml]
-  #       args: [--format, parsable, --strict]
+    - id: debug-statements
+    - id: double-quote-string-fixer
+    - id: name-tests-test
+    - id: requirements-txt-fixer
+  - repo: https://github.com/adrienverge/yamllint.git
+    rev: v1.28.0
+    hooks:
+      - id: yamllint
+        name: yamllint
+        description: runs yamllint
+        entry: yamllint
+        language: python
+        types: [file, yaml]
+        args: [--format, parsable, --strict]
