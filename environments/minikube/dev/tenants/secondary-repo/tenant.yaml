@@ -34,4 +34,3 @@ subjects:
 - kind: ServiceAccount
   name: secondary-flux-repo
   namespace: apps
-

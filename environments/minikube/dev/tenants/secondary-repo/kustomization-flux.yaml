@@ -13,4 +13,3 @@ spec:
     kind: GitRepository
     name: secondary-flux-repo
   targetNamespace: apps
-

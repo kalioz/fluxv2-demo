@@ -1,0 +1,8 @@
+ignore: .venv
+
+extends: default
+
+rules:
+  line-length:
+    max: 120
+    level: warning
