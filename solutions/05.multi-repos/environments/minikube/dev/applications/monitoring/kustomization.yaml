@@ -1,0 +1,8 @@
+# cat /environments/minikube/dev/applications/monitoring/kustomization.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- ../../../../../base/applications/monitoring
+
+patches: [] # define here the changes you want on this environment compared to the base
